@@ -9,7 +9,7 @@ app.use(express.json({ limit: '50mb' })); // set an appropriate limit
 const PORT = process.env.PORT || 3000;
 
 // Initialize Docker
-const docker = new Docker();
+var docker = new Docker({ socketPath: '/var/run/docker.sock' });
 
 // Health check route
 app.get('/', (req: Request, res: Response) => {
