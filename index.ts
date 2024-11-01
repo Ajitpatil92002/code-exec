@@ -11,9 +11,6 @@ const PORT = process.env.PORT || 3000;
 // Initialize Docker
 const docker = new Docker();
 
-// Middleware
-app.use(express.json());
-
 // Health check route
 app.get('/', (req: Request, res: Response) => {
     res.send('Web IDE Backend is running');
