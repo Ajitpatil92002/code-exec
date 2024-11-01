@@ -91,6 +91,11 @@ app.post('/execute', async (req: Request, res: Response): Promise<void> => {
     }
 });
 
+app.post('/sample', (req: Request, res: Response): void => {
+    const { data } = req.body;
+    res.json({ message: 'Data received', receivedData: data });
+});
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
