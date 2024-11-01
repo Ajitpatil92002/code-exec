@@ -4,6 +4,8 @@ import type { Request, Response } from 'express';
 import express from 'express';
 
 const app = express();
+app.use(express.json({ limit: '50mb' })); // set an appropriate limit
+
 const PORT = process.env.PORT || 3000;
 
 // Initialize Docker
