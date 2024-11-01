@@ -8,7 +8,9 @@
     "peerDependencies": {
         "typescript": "^5.6.3"
     },
-    "start": "bun run index",
+   "scripts": {                     
+        "start": "bun run index"
+    },
     "dependencies": {
         "@types/dockerode": "^3.3.31",
         "@types/express": "^5.0.0",
